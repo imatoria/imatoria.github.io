@@ -1,0 +1,11 @@
+﻿@inject IJSRuntime JS;
+
+@code {
+    [Parameter]
+    public required string Href { get; set; }
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        JS.InvokeVoidAsync("onPageLoad", Href);
+    }
+}
