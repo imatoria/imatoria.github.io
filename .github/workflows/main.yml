@@ -7,9 +7,10 @@ jobs:
     deploy-to-github-pages:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v2
+            - name: Checkout 🛎️
+            - uses: actions/checkout@v3
 
-            - name: Setup .NET Core SDK
+            - name: Setup .NET Core SDK 🔧
               uses: actions/setup-dotnet@v1
               with:
                   dotnet-version: 8.x
@@ -28,7 +29,7 @@ jobs:
               run: touch release/wwwroot/.nojekyll
 
             - name: Commit wwwroot to GitHub Pages
-              uses: imatoria/github-pages-deploy-action@3.7.1
+              uses: JamesIves/github-pages-deploy-action@v4
               with:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                   BRANCH: gh-pages
