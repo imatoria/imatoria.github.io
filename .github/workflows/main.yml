@@ -1,4 +1,4 @@
-name: deploy-to-github-pages
+name: Deploy Blazor WASM to GitHub Pages
 on:
     push:
         branches: [master]
@@ -28,7 +28,7 @@ jobs:
               run: touch release/wwwroot/.nojekyll
 
             - name: Commit wwwroot to GitHub Pages
-              uses: JamesIves/github-pages-deploy-action@3.7.1
+              uses: imatoria/github-pages-deploy-action@3.7.1
               with:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                   BRANCH: gh-pages
