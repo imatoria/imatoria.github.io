@@ -24,3 +24,9 @@ jobs:
 
             - name: Add .nojekyll file
               run: touch release/wwwroot/.nojekyll
+
+            - name: Commit changes
+              uses: EndBug/add-and-commit@v9
+              with:
+                  author_name: Praveen Matoria
+                  author_email: praveen.matoria@gmail.com
