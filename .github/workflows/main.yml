@@ -8,27 +8,27 @@ jobs:
     deploy-to-github-pages:
         runs-on: ubuntu-latest
         steps:
-            - name: Checkout 🛎️
+            - name: 1. Checkout 🛎️
               uses: actions/checkout@v4.1.1
           
-            - name: Setup .NET Core SDK 🔧
+            - name: 2. Setup .NET Core SDK 🔧
               uses: actions/setup-dotnet@v4.0.0
               with:
                   dotnet-version: 8.x
 
-            - name: dotnet workload restore
+            - name: 3. dotnet workload restore
               run: dotnet workload restore
             
-            - name: Publish .NET Core Project
+            - name: 4. Publish .NET Core Project
               run: dotnet publish Portfolio.csproj -c Release -o release --nologo
 
-            - name: copy index.html to 404.html
+            - name: 5. Copy index.html to 404.html
               run: cp release/wwwroot/index.html release/wwwroot/404.html
 
-            - name: Add .nojekyll file
+            - name: 6. Add .nojekyll file
               run: touch release/wwwroot/.nojekyll
 
-            - name: Commit wwwroot to GitHub Pages
+            - name: 7. Commit wwwroot to GitHub Pages
               uses: JamesIves/github-pages-deploy-action@v4
               with:
                   BRANCH: gh-pages
