@@ -264,11 +264,15 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 991px) {
     .mobile-nav-toggle {
-        display: block;
+        display: none;
     }
 
-    .navbar ul {
+    .header-top .navbar ul {
         display: none;
+    }
+    .header-top .navbar.navbar-mobile ul,
+    .header-top .mobile-nav-toggle {
+        display: block;
     }
 }
 
@@ -373,7 +377,13 @@ section {
         background: #4ceb95;
         margin: 4px 10px;
     }
-
+@media (max-width: 768px) {
+    .section-title h2::after {
+        width: auto;
+        display: block;
+        margin: 10px 0 4px;
+    }
+}
 .section-title p {
     margin: 0;
     margin: -15px 0 15px 0;
@@ -401,7 +411,7 @@ section {
     .about-me .content ul li {
         margin-bottom: 20px;
         display: flex;
-        align-items: center;
+        align-items: baseline;
     }
 
     .about-me .content ul strong {
@@ -998,7 +1008,7 @@ section {
         font-size: 20px;
         color: rgba(255, 255, 255, 0.5);
         font-weight: 700;
-        margin: 10px 0 8px 68px;
+        margin: 0 0 8px 68px;
     }
 
     .contact .info-box p {
@@ -1015,11 +1025,11 @@ section {
     }
 
         .contact .info-box .social-links a {
-            font-size: 18px;
+            font-size: 23px;
             display: inline-block;
             color: #fff;
             line-height: 1;
-            margin-right: 12px;
+            margin-right: 25px;
             transition: 0.3s;
         }
 
