@@ -57,6 +57,10 @@ function onAssemblyLoad() {
     if (this.location.hostname !== "localhost") {
         let pathname = this.location.pathname.substring(1);
         if (pathname != "") {
+            let allowedPaths = ["about", "resume", "portfolio", "contact"];
+            if (allowedPaths.includes(pathname) === false) {
+                return;
+            }
             window.location.href = "/?returnUrl=" + encodeURI(pathname);
         } else if (this.location.search != "") {
             let href = this.location.search.split("=")[1];

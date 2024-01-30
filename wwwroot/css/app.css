@@ -278,6 +278,12 @@ h1, h2, h3, h4, h5, h6 {
     .header-top .mobile-nav-toggle {
         display: block;
     }
+    .navbar li {
+        margin-bottom: 10px;
+        border: 1px solid white;
+        padding: 5px 10px;
+        border-radius: 2px;
+    }
 }
 
 .navbar-mobile {
@@ -323,6 +329,10 @@ h1, h2, h3, h4, h5, h6 {
     .navbar-mobile a, .navbar-mobile a:focus {
         font-size: 16px;
         position: relative;
+    }
+    .navbar-mobile a:before {
+        right: 0;
+        left: auto;
     }
 
 
@@ -1094,13 +1104,13 @@ section {
     font-size: 13px;
     color: #fff;
     z-index: 999999;
+    background: rgba(0, 0, 0, 0.8);
 }
 
 @media (max-width: 992px) {
     .credits {
         text-align: center;
         padding: 10px;
-        background: rgba(0, 0, 0, 0.8);
     }
 }
 
