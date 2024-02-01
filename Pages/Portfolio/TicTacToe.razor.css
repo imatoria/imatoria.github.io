@@ -10,28 +10,30 @@ h1 {
 }
 
 .board {
-    width: 33rem;
+    width: 31rem;
     height: 31rem;
     margin: auto;
-    border: 1px solid white;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
+    align-content: space-between;
+    justify-content: space-between;
+    align-items: stretch;
 }
 
 .square {
     width: 10rem;
     height: 10rem;
     border: 1px solid white;
-    margin-right: 4px;
     border-radius: 30px;
     background: #78bec5;
     opacity: 80;
 }
 
-.square:hover {
-    background: #ecaf4f;
-    cursor: pointer;
-}
+    .square:hover {
+        background: #ecaf4f;
+        cursor: pointer;
+    }
 
 .char {
     font-size: 5rem;

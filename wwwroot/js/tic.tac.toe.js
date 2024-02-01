@@ -6,7 +6,6 @@
         color: '#716add',
         backdrop: `
                         rgba(0,0,123,0.4)
-                        url("/images/nyan-cat-nyan.gif")
                         left top
                         no-repeat
                       `
@@ -20,7 +19,6 @@ window.ShowTie = () => {
         color: '#716add',
         backdrop: `
                         rgba(0,0,123,0.4)
-                        url("/images/crying-tear.gif")
                         left top
                         no-repeat
                       `
