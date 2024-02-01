@@ -1,0 +1,45 @@
+/* /Pages/Portfolio/TicTacToe.razor.rz.scp.css */
+*[b-ewzwo6d37b] {
+    padding: 0;
+    margin: 0;
+    font-family: 'Itim', cursive;
+}
+
+h1[b-ewzwo6d37b] {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.board[b-ewzwo6d37b] {
+    width: 31rem;
+    height: 31rem;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: space-between;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.square[b-ewzwo6d37b] {
+    width: 10rem;
+    height: 10rem;
+    border: 1px solid white;
+    border-radius: 30px;
+    background: #78bec5;
+    opacity: 80;
+}
+
+    .square:hover[b-ewzwo6d37b] {
+        background: #ecaf4f;
+        cursor: pointer;
+    }
+
+.char[b-ewzwo6d37b] {
+    font-size: 5rem;
+    text-align: center;
+    font-weight: 800;
+    margin-top: 15%;
+    color: #dc685a;
+}

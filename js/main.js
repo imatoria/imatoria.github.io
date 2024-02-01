@@ -57,7 +57,7 @@ function onAssemblyLoad() {
     if (this.location.hostname !== "localhost") {
         let pathname = this.location.pathname.substring(1);
         if (pathname != "") {
-            let allowedPaths = ["about", "resume", "portfolio", "contact"];
+            let allowedPaths = ["about", "resume", "portfolio", "portfolio/tic-tac-toe", "contact"];
             if (allowedPaths.includes(pathname) === false) {
                 return;
             }
@@ -70,7 +70,8 @@ function onAssemblyLoad() {
     
 }
 function onPageLoad(href) {
-    let section = select("#" + href)
+    let _href = href.replace(/\//g, "_");
+    let section = select("#" + _href)
     if (section == null) {
         return;
     }
@@ -94,7 +95,7 @@ function onPageLoad(href) {
         navbarToggle.classList.toggle('bi-list')
         navbarToggle.classList.toggle('bi-x')
     }
-
+    
     if (href == 'home') {
         header.classList.remove('header-top')
         sections.forEach((item) => {
@@ -119,7 +120,7 @@ function onPageLoad(href) {
         section.classList.add('section-show')
     }
 
-    scrollto(href)
+    scrollto(_href)
 }
 
 /**
