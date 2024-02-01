@@ -63,7 +63,7 @@ function onAssemblyLoad() {
             }
             window.location.href = "/?returnUrl=" + encodeURI(pathname);
         } else if (this.location.search != "") {
-            let href = this.location.search.split("=")[1];
+            let href = this.location.search.split("=")[1].replace(/\//g, "_");
             select("[href=" + href + "]").click();
         }
     }
