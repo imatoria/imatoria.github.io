@@ -11,8 +11,8 @@ h1[b-ewzwo6d37b] {
 }
 
 .board[b-ewzwo6d37b] {
-    width: 31rem;
-    height: 31rem;
+    width: 498px;
+    height: 498px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
@@ -20,15 +20,22 @@ h1[b-ewzwo6d37b] {
     align-content: space-between;
     justify-content: space-between;
     align-items: stretch;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .square[b-ewzwo6d37b] {
-    width: 10rem;
-    height: 10rem;
-    border: 1px solid white;
+    width: 32%;
+    height: 32%;
     border-radius: 30px;
     background: #78bec5;
     opacity: 80;
+}
+@media (max-width: 575px) {
+    .board[b-ewzwo6d37b] {
+        width: 480px;
+        height: 480px;
+    }
 }
 
     .square:hover[b-ewzwo6d37b] {
@@ -40,6 +47,6 @@ h1[b-ewzwo6d37b] {
     font-size: 5rem;
     text-align: center;
     font-weight: 800;
-    margin-top: 15%;
+    margin-top: 18%;
     color: #dc685a;
 }
