@@ -11,7 +11,14 @@
             int idx = i;
             <div class="square"
                  @onclick="()=> SquareCliked(idx)">
-                <h5 class="char">@Board[i]</h5>
+                @if (Board[i] == "")
+                {
+                    <h5 class="char text-nowrap">&nbsp;</h5>
+                }
+                else
+                {
+                    <h5 class="char text-nowrap">@Board[i]</h5>
+                }
             </div>
         }
     </div>
