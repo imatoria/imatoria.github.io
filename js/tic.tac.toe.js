@@ -9,11 +9,13 @@
                         left top
                         no-repeat
                       `
-    })
+    }).then(() => {
+        window.DotNetReference.invokeMethodAsync("ResetGame");
+    });
 }
 window.ShowTie = () => {
     Swal.fire({
-        title: 'Go home, nobody won!',
+        title: 'Hard luck, nobody won!',
         width: 350,
         padding: '3em',
         color: '#716add',
@@ -22,5 +24,7 @@ window.ShowTie = () => {
                         left top
                         no-repeat
                       `
-    })
+    }).then(() => {
+        window.DotNetReference.invokeMethodAsync("ResetGame");
+    });
 }

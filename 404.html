@@ -14,6 +14,13 @@
     <link rel="stylesheet" href="css/app.css" />
     <link rel="icon" type="image/png" href="favicon.png" />
     <link href="PraveenMatoria.styles.css" rel="stylesheet" />
+    <script type="text/javascript">
+        // Setting global DotNetReference object to call instance methods from javascript.
+        // It is called from BasePage.
+        SetDotnetReference = (dotNetHelper) => {
+            window.DotNetReference = dotNetHelper;
+        };
+    </script>
 </head>
 
 <body>
