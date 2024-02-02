@@ -29,7 +29,7 @@ public partial class TicTacToe
     private async Task RunOpponentMove()
     {
         var random = new Random();
-        var waitTime = random.Next(500, 1500);
+        var waitTime = random.Next(300, 800);
         Thread.Sleep(waitTime);
 
         string Opponent = Player == "X" ? "O" : "X";
