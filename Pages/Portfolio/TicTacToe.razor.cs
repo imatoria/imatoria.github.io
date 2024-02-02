@@ -21,10 +21,13 @@ public partial class TicTacToe
 
     private async Task SquareCliked(int i, int j)
     {
+        // Return if board space not empty
+        if (Board[i, j] != "") return;
+
         Board[i, j] = Player;
 
         //Making a separate thread to avoid blocking current UI update.
-        await Task.Run(() => RunOpponentMove());
+        await Task.Run(RunOpponentMove);
     }
     private async Task RunOpponentMove()
     {
