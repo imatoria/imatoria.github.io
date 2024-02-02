@@ -37,6 +37,13 @@ public partial class TicTacToe
 
         string Opponent = Player == "X" ? "O" : "X";
         Move move = FindBestMove(Board, Opponent, Player);
+
+        if (HasGameTied())
+        {
+            await JS.InvokeVoidAsync("ShowTie");
+            return;
+        }
+
         Board[move.row, move.col] = Opponent;
 
 
@@ -60,12 +67,6 @@ public partial class TicTacToe
                 await JS.InvokeVoidAsync("ShowSwal", winner);
                 return;
             }
-        }
-
-        if (HasGameTied())
-        {
-            await JS.InvokeVoidAsync("ShowTie");
-            return;
         }
     }
 
