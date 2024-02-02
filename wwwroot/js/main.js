@@ -54,6 +54,10 @@ function onAssemblyLoad() {
         this.classList.toggle('bi-x')
     });
 
+    // Github Pages shows 404 page when reloading.
+    // Fix =>
+    //      Force page to navigate to homepage with returnUrl.
+    //      Click the corresponding element for returnUrl.
     if (this.location.hostname !== "localhost") {
         let pathname = this.location.pathname.substring(1);
         if (pathname != "") {
