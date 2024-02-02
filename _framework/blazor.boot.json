@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "PraveenMatoria",
   "resources": {
-    "hash": "sha256-kkc9+Do/UZtRfwAKXfO6xui6nJjXQc7EGVox3UPXz2k=",
+    "hash": "sha256-qn7N7/UP3UlrlnIs7QWfwpmZLjDoDLNPkxayAGzz4r8=",
     "jsModuleNative": {
       "dotnet.native.8.0.1.ahpp78valh.js": "sha256-SGOlISx+3G4kkvpC9Uq3qoPGsnjxGmW61QBev0lyI5U="
     },
@@ -31,7 +31,7 @@
       "Microsoft.Extensions.Primitives.wasm": "sha256-6187ynEahDlSLMBvD4vAmiLpZ3clRb5xu6rM7O8AxNo=",
       "Microsoft.JSInterop.wasm": "sha256-lXwhdv0Is9FMH/j0+WH3zoNWAGLbVaONtGucJ/4URQ0=",
       "Microsoft.JSInterop.WebAssembly.wasm": "sha256-CQVLCKiSxLN5ghyJZG3mhnMGRROdqrbNUjtAXB0nWb8=",
-      "PraveenMatoria.wasm": "sha256-tDsR4JmstDSzyeEmQuaagaAAcUj7gHwsB/IlAw6w9pw=",
+      "PraveenMatoria.wasm": "sha256-VzCVAeGns2O9JDpSYG+OxNF7oHSFG9XGXKammnnSXy4=",
       "System.Collections.Concurrent.wasm": "sha256-0j1YW/96ftT2C89MHcCTY0SmqlOeLhlAcBjNqgQ0A90=",
       "System.Collections.wasm": "sha256-du+l9M3MDQD8juAMXZIuKSoUsXcDOfDrj75FcHRfdH0=",
       "System.ComponentModel.wasm": "sha256-/6Kik6mC6ZHx8OXft116HbGv8VWDCF3oge/a6pf8jB8=",
