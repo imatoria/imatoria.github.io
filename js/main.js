@@ -61,7 +61,7 @@ function onAssemblyLoad() {
     if (this.location.hostname !== "localhost") {
         let pathname = this.location.pathname.substring(1);
         if (pathname != "") {
-            let allowedPaths = ["about", "resume", "portfolio", "portfolio/tic-tac-toe", "contact"];
+            let allowedPaths = ["about", "resume", "projects", "portfolio", "portfolio/tic-tac-toe", "contact"];
             if (allowedPaths.includes(pathname) === false) {
                 return;
             }
