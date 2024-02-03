@@ -6,25 +6,33 @@
 <PageTitle>Tic Tac Toe</PageTitle>
 
 <section id="portfolio_tic-tac-toe" class="tic-tac-toe">
-    <div class="board">
-        @for (int i = 0; i < 3; i++)
-        {
-            @for (int j = 0; j < 3; j++)
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Tic Tac Toe</h2>
+        </div>
+        <p>This is the famous Tic Tac Toe game.</p>
+        <p class="mb-5">You will be playing against AI. Mind it AI is very efficient in this game.</p>
+        <div class="board">
+            @for (int i = 0; i < 3; i++)
             {
-                int xi = i;
-                int yj = j;
-                <div class="square" @onclick="@(() => SquareCliked(xi, yj))">
-                    @if (Board[i, j] == "")
-                    {
-                        <h5 class="char text-nowrap">&nbsp;</h5>
-                    }
-                    else
-                    {
-                        <h5 class="char text-nowrap">@Board[i, j]</h5>
-                    }
-                </div>
+                @for (int j = 0; j < 3; j++)
+                {
+                    int xi = i;
+                    int yj = j;
+                    <div class="square" @onclick="@(() => SquareCliked(xi, yj))">
+                        @if (Board[i, j] == "")
+                        {
+                            <h5 class="char text-nowrap">&nbsp;</h5>
+                        }
+                        else
+                        {
+                            <h5 class="char text-nowrap">@Board[i, j]</h5>
+                        }
+                    </div>
+                }
             }
-        }
+        </div>
     </div>
 </section>
 
