@@ -23,11 +23,11 @@
                     <div class="square" @onclick="@(() => SquareCliked(xi, yj))">
                         @if (Board[i, j] == "")
                         {
-                            <h5 class="char text-nowrap">&nbsp;</h5>
+                            <h5 class="char text-nowrap d-flex justify-content-center align-items-center">&nbsp;</h5>
                         }
                         else
                         {
-                            <h5 class="char text-nowrap">@Board[i, j]</h5>
+                            <h5 class="char text-nowrap d-flex justify-content-center align-items-center">@Board[i, j]</h5>
                         }
                     </div>
                 }
