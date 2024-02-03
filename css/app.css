@@ -201,11 +201,21 @@ h1, h2, h3, h4, h5, h6 {
         align-content: flex-start;
         justify-content: space-around;
     }
-
-    .navbar li {
-        position: relative;
+    .header-top .navbar ul ul {
+        display: none;
     }
-
+    .navbar li,
+    .header-top .navbar-mobile li{
+        position: relative;
+        margin-bottom: 10px;
+        border: 1px solid white;
+        padding: 5px 10px;
+        border-radius: 2px;
+    }
+    .header-top li {
+        border: none;
+        margin: 0;
+    }
         .navbar li + li {
             margin-left: 30px;
         }
@@ -316,12 +326,6 @@ h1, h2, h3, h4, h5, h6 {
     .navbar-mobile li {
         padding: 12px 20px;
     }
-    .navbar li {
-        margin-bottom: 10px;
-        border: 1px solid white;
-        padding: 5px 10px;
-        border-radius: 2px;
-    }
         .navbar-mobile li + li {
             margin: 0;
         }
@@ -336,9 +340,6 @@ h1, h2, h3, h4, h5, h6 {
     }
     .navbar-mobile ul ul {
         margin: 10px 0;
-    }
-    .header-top .navbar ul ul {
-        display: none;
     }
 
 
