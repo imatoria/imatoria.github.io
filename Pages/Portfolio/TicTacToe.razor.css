@@ -25,12 +25,6 @@
     background: #78bec5;
     opacity: 80;
 }
-@media (max-width: 575px) {
-    .board {
-        width: 480px;
-        height: 480px;
-    }
-}
 
     .square:hover {
         background: #ecaf4f;
