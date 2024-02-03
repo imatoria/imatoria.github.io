@@ -1,4 +1,21 @@
-﻿window.ShowSwal = (player) => {
+﻿function Resize() {
+    var board = select(".board");
+
+    board.style.width = "100%";
+    board.style.height = "100%";
+
+    var width = board.clientWidth;
+    var height = board.clientHeight;
+
+    if (width < 498 || height < 498) {
+        board.style.width = Math.min(width, height) + "px";
+        board.style.height = Math.min(width, height) + "px";
+    }
+}
+window.onresize = Resize;
+Resize();
+
+window.ShowSwal = (player) => {
     Swal.fire({
         title: player + ' won!!',
         width: 350,
