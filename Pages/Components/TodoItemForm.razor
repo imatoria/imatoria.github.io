@@ -1,0 +1,70 @@
+﻿@using PraveenMatoria.Models
+@using PraveenMatoria.Services
+@inject ITodoService _todoService
+
+<EditForm class="mb-4" Model=@NewItem OnValidSubmit="@ItemChanged">
+    <DataAnnotationsValidator />
+    <input type="hidden" @bind-value="@NewItem.Id" />
+
+    @* <span class="border-5 border-top-0 border-end-0 border-bottom-0 @(NewItem.IsPersonal ? "border-success" : "border-danger")"></span> *@
+    <div class="input-group">
+        <InputSelect @bind-Value="@NewItem.IsPersonal" class="form-select w-120-px flex-grow-0 disabled" aria-label="Is Personal">
+            <option value="true" selected>Personal</option>
+            <option value="false">Business</option>
+        </InputSelect>
+        <InputText id="name" class="form-control" @bind-Value="@NewItem.Name" placeholder="Write here..."></InputText>
+        <input type="submit" class="btn btn-primary" value="Save" />
+        <input type="reset" class="btn btn-secondary" value="Clear " onclick="@OnItemChanged" />
+    </div>
+    @* <div class="row mb-2">
+        <div class="col-lg-4 col-md-6 col-12 form-group">
+            <label for="name" class="form-label">Name:</label>
+            <InputText id="name" class="form-control" @bind-Value="@NewItem.Name"></InputText>
+            <ValidationMessage For="(() => NewItem.Name)"></ValidationMessage>
+        </div>
+    </div>
+    <div class="row mb-4">
+        <div class="col-lg-4 col-md-6 col-12 form-group">
+            <label class="form-label">Is Personal:</label><br />
+
+            <InputRadioGroup Name="IsPersonal" @bind-Value="@NewItem.IsPersonal">
+                <InputRadio name="IsPersonal" class="btn-check" Value="@true" id="IsPersonal-Yes" autocomplete="off"></InputRadio>
+                <label class="btn btn-outline-success me-2" for="IsPersonal-Yes">Yes</label>
+
+                <InputRadio name="IsPersonal" class="btn-check" Value="@false" id="IsPersonal-No" autocomplete="off"></InputRadio>
+                <label class="btn btn-outline-danger" for="IsPersonal-No">No</label>
+            </InputRadioGroup>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-2 col-md-3 col-6 text-end">
+            <input type="submit" class="btn btn-primary" value="Save" />
+        </div>
+        <div class="col-lg-2 col-md-3 col-6">
+            <input type="reset" class="btn btn-secondary" value="Clear" onclick="@OnItemChanged" />
+        </div>
+    </div> *@
+</EditForm>
+
+@code {
+    [Parameter]
+    public required Action OnItemChanged { get; set; }
+
+    [Parameter]
+    public required TodoItem NewItem { get; set; }
+
+    public void ItemChanged(EditContext editContext)
+    {
+        if (NewItem.Id == 0)
+        {
+            NewItem.Id = _todoService.GetAll().Max(x => x.Id) + 1;
+            _todoService.Add(NewItem);
+        }
+        else
+        {
+            _todoService.Update(NewItem);
+        }
+
+        OnItemChanged();
+    }
+}

@@ -84,10 +84,6 @@ public partial class TicTacToe
         StateHasChanged();
     }
 
-    private async void PlayOpponent()
-    {
-
-    }
     private bool HasGameTied()
     {
         for (int i = 0; i < 3; i++)
