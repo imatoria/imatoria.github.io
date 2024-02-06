@@ -1,5 +1,5 @@
 ﻿@page "/portfolio/todo"
-@using PraveenMatoria.Models
+@using PraveenMatoria.Database
 @using PraveenMatoria.Pages.Portfolio
 
 @inherits BasePage
@@ -14,15 +14,15 @@
         </div>
         <p class="mb-4">Hello, Simple Todo app here.</p>
 
-        <TodoItemForm NewItem="@TodoItem" OnItemChanged="@ItemChanged" />
+        <TodoItemForm NewItem="@Todo" OnItemChanged="@ItemChangedAsync" />
         <ul class="list-group">
             @foreach (var todoItem in TodoList)
             {
                 <li class="list-group-item hstack rounded mb-1 p-0 ps-2 @GetTodoItemClass(todoItem)">
-                    <input class="form-check-input" type="checkbox" value="@todoItem.IsComplete" onclick="@(() => ToggleComplete(todoItem))" />
+                    <input class="form-check-input" type="checkbox" value="@todoItem.IsComplete" onclick="@(() => ToggleCompleteAsync(todoItem))" />
                     <div class="flex-grow-1 mx-2 text-truncate @GetTodoItemNameClass(todoItem)">@todoItem.Name</div>
                     <button type="button" class="btn btn-primary rounded-0" onclick="@(() => ItemEdit(todoItem))">Edit</button>
-                    <button type="button" class="btn btn-danger rounded-0 rounded-end" onclick="@(() => ItemDeleted(todoItem))">Delete</button>
+                    <button type="button" class="btn btn-danger rounded-0 rounded-end" onclick="@(() => ItemDeletedAsync(todoItem))">Delete</button>
                 </li>
 
                 @* <li class="list-group-item input-group d-flex bd-highlight align-items-center mb-1 p-0 ps-2 @GetTodoItemClass(todoItem)">

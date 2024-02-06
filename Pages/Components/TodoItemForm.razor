@@ -1,6 +1,7 @@
-﻿@using PraveenMatoria.Models
-@using PraveenMatoria.Services
-@inject ITodoService _todoService
+﻿@using PraveenMatoria.Database
+@using PraveenMatoria.Database.Services
+
+@inject TodoService _todoService
 
 <EditForm class="mb-4" Model=@NewItem OnValidSubmit="@ItemChanged">
     <DataAnnotationsValidator />
@@ -51,18 +52,19 @@
     public required Action OnItemChanged { get; set; }
 
     [Parameter]
-    public required TodoItem NewItem { get; set; }
+    public required Todo NewItem { get; set; }
 
-    public void ItemChanged(EditContext editContext)
+    public async Task ItemChanged(EditContext editContext)
     {
         if (NewItem.Id == 0)
         {
-            NewItem.Id = _todoService.GetAll().Max(x => x.Id) + 1;
+            var TodoList = await _todoService.GetAllAsync();
+            NewItem.Id = TodoList.Max(x => x.Id) + 1;
             _todoService.Add(NewItem);
         }
         else
         {
-            _todoService.Update(NewItem);
+            await _todoService.UpdateAsync(NewItem);
         }
 
         OnItemChanged();

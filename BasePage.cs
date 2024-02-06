@@ -8,9 +8,9 @@ public class BasePage: ComponentBase
     [Inject]
     public required IJSRuntime JS { get; set; }
 
-    protected override void OnInitialized()
+    protected override async Task OnInitializedAsync()
     {
         var DotNetHelper = DotNetObjectReference.Create(this);
-        JS.InvokeVoidAsync("SetDotnetReference", DotNetHelper);
+        await JS.InvokeVoidAsync("SetDotnetReference", DotNetHelper);
     }
 }
