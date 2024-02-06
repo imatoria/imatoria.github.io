@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "PraveenMatoria",
   "resources": {
-    "hash": "sha256-4KHt5/Wzk7SrYZPpI7sR4hYgFlMF1wqTpPTIJyExDzQ=",
+    "hash": "sha256-tov09DrdhApqEeaYKGwRzCzIml1M1z1Bno/GPk5gh6s=",
     "jsModuleNative": {
       "dotnet.native.8.0.1.g590m6x5vi.js": "sha256-UiCQyOQ1dUsYRX71y6YxwgZBfwQ+3N4u5odizXHRrC8="
     },
@@ -9,7 +9,7 @@
       "dotnet.runtime.8.0.1.jvv0ztohpa.js": "sha256-HZOoaGpz9ekMa/oSmeApSKp3DXNdVUq2UBqsTIIiN8A="
     },
     "wasmNative": {
-      "dotnet.native.wasm": "sha256-6xkd1Lsl1PpI9lWYP4VImLnM1Lwt0eb3Dg5v4CzBgw4="
+      "dotnet.native.wasm": "sha256-DTjRJis8+qSlFl2Uf/Sn5wpfeyFtkU+qnoNFSyVTEaw="
     },
     "icu": {
       "icudt_CJK.dat": "sha256-SZLtQnRc0JkwqHab0VUVP7T3uBPSeYzxzDnpxPpUnHk=",
@@ -41,7 +41,7 @@
       "Microsoft.JSInterop.wasm": "sha256-eCjjp96br8gcQOTfCWLA8b/GIQxN5qnyYpb3W5TE/GY=",
       "Microsoft.JSInterop.WebAssembly.wasm": "sha256-Ek9T56t6RrF2CuizzdtWLEJmVoAelxMzIJEnFlwqHRQ=",
       "netstandard.wasm": "sha256-YUhQ8wY0uOW5RjzsmulVefj1BJwQQQ2XHq1Gnq1Ngc4=",
-      "PraveenMatoria.wasm": "sha256-6JrrO60K3LiJDWawY/QHQS6Z829sNkLXKSZKpcLHmtg=",
+      "PraveenMatoria.wasm": "sha256-GDD05Iu9TesskIS84U2yr//0Zg5JAdeZXMp42p+qr44=",
       "SQLitePCLRaw.batteries_v2.wasm": "sha256-toPDrqE4WYciUB6WMq5pQ2hBQEHDUmXwFose/w5HE+k=",
       "SQLitePCLRaw.core.wasm": "sha256-fZRrd/xWpxMQOQ1wzLvGTZighG4GDklhgyGcv7+po9Q=",
       "SQLitePCLRaw.provider.e_sqlite3.wasm": "sha256-40Q1M7FJr6bB8XlRwmFoSGfQF9dG7s+/66zucSfsI2M=",
