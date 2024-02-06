@@ -25,11 +25,42 @@
 
 <body>
     <div id="app">
-        <svg class="loading-progress">
+        <!--<svg class="loading-progress">
             <circle r="40%" cx="50%" cy="50%" />
             <circle r="40%" cx="50%" cy="50%" />
         </svg>
-        <div class="loading-progress-text"></div>
+        <div class="loading-progress-text"></div>-->
+        <div class="splash-screen">
+            <div class="splash-container">
+                <img class="splash-img" src="/images/loading-water.gif" />
+                <p class="splash-message">
+                    <strong>Resume</strong> is loading ...
+                </p>
+            </div>
+        </div>
+        <style type="text/css">
+            .splash-screen {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #467fe7;
+                height: 100%;
+                width: 100%;
+                position: fixed;
+            }
+
+            .splash-container {
+                margin-top: -100px;
+            }
+
+            .splash-message {
+                margin-top: -170px;
+                text-align: center;
+                font-size: x-large;
+                font-family: monospace;
+                color: #000;
+            }
+        </style>
     </div>
 
     <div id="blazor-error-ui">
