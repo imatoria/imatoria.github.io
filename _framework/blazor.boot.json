@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "PraveenMatoria",
   "resources": {
-    "hash": "sha256-yvag+bhSmsqNcJUNxn/uQLYqRSgJZDgqOcKaoJNGx68=",
+    "hash": "sha256-x65DGBcn811hLvvvLl3NBdMJ9ySzXnrXiUIU8KbSilg=",
     "fingerprinting": {
       "Microsoft.AspNetCore.Components.sosy1yxxi2.wasm": "Microsoft.AspNetCore.Components.wasm",
       "Microsoft.AspNetCore.Components.Forms.wjlbetuhlc.wasm": "Microsoft.AspNetCore.Components.Forms.wasm",
@@ -74,9 +74,9 @@
       "System.8rv0tdtrxz.wasm": "System.wasm",
       "netstandard.rtz267540s.wasm": "netstandard.wasm",
       "System.Private.CoreLib.5y0tii6fq5.wasm": "System.Private.CoreLib.wasm",
-      "PraveenMatoria.ozyveprrl8.wasm": "PraveenMatoria.wasm",
+      "PraveenMatoria.yxttt5p7s7.wasm": "PraveenMatoria.wasm",
       "dotnet.native.wzsfp5sr69.js": "dotnet.native.js",
-      "dotnet.native.g9mujm5hys.wasm": "dotnet.native.wasm",
+      "dotnet.native.uoy8x0aj7h.wasm": "dotnet.native.wasm",
       "dotnet.js": "dotnet.js",
       "dotnet.runtime.drv0pr9n5o.js": "dotnet.runtime.js",
       "icudt_CJK.tjcz0u77k5.dat": "icudt_CJK.dat",
@@ -90,7 +90,7 @@
       "dotnet.runtime.drv0pr9n5o.js": "sha256-yfXUv1l/B489E8p12JxUvxly0JvHL9CCsoZUDlfGH9c="
     },
     "wasmNative": {
-      "dotnet.native.g9mujm5hys.wasm": "sha256-NGc2obutsR8+wTMoIpowuHyPOTdGB/na8R3dvPF+2R0="
+      "dotnet.native.uoy8x0aj7h.wasm": "sha256-noI0YOyvH4BTZPTwuIBMAKTo4dT4KtLgBbhVtvXSQu0="
     },
     "icu": {
       "icudt_CJK.tjcz0u77k5.dat": "sha256-SZLtQnRc0JkwqHab0VUVP7T3uBPSeYzxzDnpxPpUnHk=",
@@ -169,7 +169,7 @@
       "System.8rv0tdtrxz.wasm": "sha256-xMF0eauQ5DkSzUozHLFFMQnL6DSJO09nJLtgag+Dzbw=",
       "netstandard.rtz267540s.wasm": "sha256-IUzFH8qHB9rIOopS3JxvhpZJN1Yy7/ZnrljOYxKWoEQ=",
       "System.Private.CoreLib.5y0tii6fq5.wasm": "sha256-DaQ/qISzUt9PmNsw9/9XvGH0/G4pZiBP7TXDWDlLTmQ=",
-      "PraveenMatoria.ozyveprrl8.wasm": "sha256-5ATkgT26eeB5Z/5SYoGZNYyQ28ZG8E6CypOFdtXaiFs="
+      "PraveenMatoria.yxttt5p7s7.wasm": "sha256-1v3F+nKXpJtCnGv6y1UfUh/yn5ECtLDIzHuEAuSFZM0="
     },
     "assembly": {}
   },
