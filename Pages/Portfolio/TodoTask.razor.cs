@@ -9,7 +9,7 @@ namespace PraveenMatoria.Pages.Portfolio
     public partial class TodoTask() : BasePage
     {
         [Inject]
-        public TodoService TodoService { get; set; }
+        public TodoService TodoService { get; set; } = default!;
 
         private Todo Todo { get; set; } = new Todo(0, "");
         private IList<Todo> TodoList { get; set; } = [];
