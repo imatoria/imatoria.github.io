@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.EntityFrameworkCore;
 using PraveenMatoria;
 using PraveenMatoria.Database;
-using PraveenMatoria.Database.Services;
 using SqliteWasmHelper;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
